@@ -1,0 +1,15 @@
+ 
+body{
+    background-color: #1b2225;
+    color:aliceblue;
+}
+.statebar{
+    display:flex;
+    color:#c09e06;
+    background-color:#F72798;
+    max-width: fit-content;
+    align-items: center;
+    margin-left:40vw;
+    margin-right:40vw;
+
+}
