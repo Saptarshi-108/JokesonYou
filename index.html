@@ -1,29 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" lang="en" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Killer Joke</title>
     <link rel="stylesheet" href="./main.css" />
     <script src="https://unpkg.com/sv443-joke-api@0.0.8/web/index.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
+    <div class="lg-bar">
+        <form action="#">
+            <label for="lang">
+                <div class="drop-down">Select Language</div>
+            </label>
+            <select name="languages" id="lang">
+                <option value="cs">Czech</option>
+                <option value="de">German</option>
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="pt">Portuguese</option>
+            </select>
+        </form>
+    </div>
     <div class="statebar">
-      <h1>Wanna hear a joke ?</h1>
+        <h1>Wanna hear a joke ?</h1>
     </div>
-    <div>
-      <ul type="none">
-        <li>Select Categories:</li>
-        <li><input type="radio" />Any</li>
-        <li><input type="radio" />Custom</li>
-        <ul>
-          <li><input type="checkbox" />Miscellaneous</li>
-          <li><input type="checkbox" />Dark</li>
-          <li><input type="checkbox" />Pun</li>
-          <li><input type="checkbox" />Spooky</li>
-          <li><input type="checkbox" />Christmas</li>
-        </ul>
-      </ul>
-    </div>
-  </body>
+    <td>
+        <div class="table">
+            <tr>
+                <ul type="none">
+                    <li>Select Categories:</li>
+                    <li>
+                        <input type="radio" id="any" name="category" onclick="toggleRadio('any')">
+                        <label for="any">Any</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="custom" name="category" onclick="toggleRadio('custom')">
+                        <label for="custom">Custom</label>
+                    </li>
+                </ul>
+
+
+                <ul type="none">
+                    <li><input type="checkbox" />Miscellaneous</li>
+                    <li><input type="checkbox" />Dark</li>
+                    <li><input type="checkbox" />Pun</li>
+                    <li><input type="checkbox" />Spooky</li>
+                    <li><input type="checkbox" />Christmas</li>
+                </ul>
+                </ul>
+        </div>
+        <ul type="none" class="flags">
+            <li>Select Blacklisted Flags:</li>
+            <ul type="none">
+                <li>
+                    <input type="checkbox" />NSFW (possibly 18+)
+                </li>
+                <li>
+                    <input type="checkbox" />Religious
+                </li>
+                <li>
+                    <input type="checkbox" />Political
+                </li>
+                <li><input type="checkbox" />
+                    Racist</li>
+                <li><input type="checkbox" />Sexist
+                </li>
+                <li>
+                    <input type="checkbox">Explicit
+                </li>
+            </ul>
+            </tr>
+            <tr>
+                <ul type="none">
+                    Select at least one joke type:
+                    <li>
+                        <input type="checkbox" /> single
+                    </li>
+                    <li>
+                        <input type="checkbox" />two-part
+                    </li>
+                </ul>
+            </tr>
+            <tr>
+                <ul type="none">
+                    <li>
+                        <div class="joke-num">
+                            <form action="#">
+                                <label for="numberInput">Number of jokes (0 - 10):</label>
+                                <input type="number" id="numberInput" name="numberInput" min="0" max="10" required>
+                                <input type="submit" value="Go">
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </tr>
+    </td>
+    <div class="result">result</div>
+    <script src="script.js"></script>
+</body>
+
 </html>
