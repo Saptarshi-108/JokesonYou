@@ -1,15 +1,31 @@
- 
-body{
-    background-color: #1b2225;
-    color:aliceblue;
+body {
+  background-color: #1b2225;
+  color: aliceblue;
+  margin-left: 15%;
+  margin-right: 20%;
 }
-.statebar{
-    display:flex;
-    color:#c09e06;
-    background-color:#F72798;
-    max-width: fit-content;
-    align-items: center;
-    margin-left:40vw;
-    margin-right:40vw;
-
+.statebar {
+  display: flex;
+  color: #c09e06;
+  background-color: #f72798;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vw;
+}
+.lg-bar {
+  color: #1b2225;
+  display: flex;
+  background-color: antiquewhite;
+  justify-content: right;
+  padding-right: 5vw;
+  margin-top: 2vw;
+}
+.joke-num {
+  margin-top: 3vw;
+}
+.result {
+  background-color: azure;
+  border-radius: 15px;
+  justify-content: center;
+  margin-top: 10px;
 }
