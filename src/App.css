@@ -1,4 +1,13 @@
 /* Base styles */
+@font-face {
+  font-family: "Atma-Bold";
+  src: url('https://fonts.googleapis.com/css2?family=Atma:wght@700&display=swap');
+}
+
+:root {
+  --font--1: "Atma-Bold",sans-serif;
+}
+
 body {
   background: linear-gradient(
     30deg,
@@ -16,8 +25,8 @@ body {
     hsl(75deg 71% 77%) 93%,
     hsl(56deg 100% 82%) 100%
   );
-  color: #604cc3;
-  font-family: Arial, sans-serif;
+  color: #b9b6c9;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif, sans-serif;
   background-size: 400% 400%;
   animation: gradientShift 10s ease infinite;
   margin: 0;
@@ -26,13 +35,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(...); /* Your gradient here */
 }
 
 @keyframes gradientShift {
@@ -46,28 +48,37 @@ body {
     background-position: 0% 50%;
   }
 }
+
 .App {
-  width: 90vw; /* Width fixed to 90% of the viewport width */
-  max-width: 1200px; /* Maximum width constraint */
-  min-width: 800px; /* Minimum width to prevent shrinking too much */
-  height: 100%; /* Fixed height */
-  margin: auto; /* Center horizontally */
+  width: 90vw;
+  max-width: 1200px;
+  min-width: 800px;
+  height: 150%;
+  margin: auto;
   padding: 20px;
-  background-color: #507687;
+  color:azure;
+  background-color: #243642;
   border-radius: 10px;
   box-sizing: border-box;
-  overflow-y: auto; /* Prevent content overflow */
+  overflow-y: auto;
 }
 
 .statebar {
   display: flex;
-  color: #fff8a1;
-  background-color: #384b70;
+  color: #ffd900;
+  font-size: larger;
+  font-family: var(--font--1);
   max-width: fit-content;
+  cursor: pointer;
   align-items: center;
   margin: 0 auto 20px;
   padding: 10px 20px;
   border-radius: 5px;
+  border-width: 3px;
+  border-color: antiquewhite;
+  background: #aa4b6b;
+  background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+  background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
 }
 
 .category-section {
@@ -81,8 +92,9 @@ body {
 }
 
 .category-section label {
-  display: block;
+  display: inline-block;
   margin-bottom: 5px;
+  color: #ffd700;
 }
 
 button {
@@ -94,79 +106,44 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
 }
 
-button:hover {
-  background-color: #ff7f3e;
+.checkbox-wrapper-9 {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
-.joke-box {
-  margin-top: 20px;
-  padding: 20px;
-  border: 2px solid #c09e06;
-  background-color: #604cc3;
-  color: #80c4e9;
-  border-radius: 10px;
-  min-height: 150px; /* Adjust the height as needed */
-  overflow-y: auto; /* Allows scrolling if content overflows */
+.checkbox-wrapper-9 .tgl {
+  display: none;
 }
 
-
-
-.joke-box h2 {
-  color: #ff7f3e;
-  margin-top: 0;
+.checkbox-wrapper-9 .tgl + .tgl-btn {
+  outline: 0;
+  display: block;
+  width: auto;
+  height: auto;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  padding: 5px 10px;
+  transition: all 0.2s ease;
+  background: #f2f2f2;
+  border: 2px solid #ddd;
+  border-radius: 20px;
 }
 
-.joke-box p {
-  margin: 10px 0;
-  font-size: 1.2em;
+.checkbox-wrapper-9 .tgl + .tgl-btn span {
+  display: inline-block;
+  color: #333;
 }
 
-#jokeAmount {
-  margin-left: 10px;
-  padding: 5px;
-  width: 50px;
+.checkbox-wrapper-9 .tgl:checked + .tgl-btn {
+  background: #7FC6A6;
+  border-color: #7FC6A6;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-  margin-right: 5px;
+.checkbox-wrapper-9 .tgl:checked + .tgl-btn span {
+  color: #fff;
 }
 
-hr {
-  border: none;
-  border-top: 1px solid #b6c7aa;
-  margin: 15px 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .App {
-    padding: 15px;
-  }
-
-  button {
-    width: 100%;
-    font-size: 14px;
-  }
-
-
-}
-
-@media (max-width: 480px) {
-  .App {
-    padding: 15px;
-  }
-
-  .category-section h3 {
-    font-size: 1.2em;
-  }
-
-  button {
-    font-size: 13px;
-    padding: 8px;
-  }
-
-}
