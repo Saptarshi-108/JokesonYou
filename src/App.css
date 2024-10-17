@@ -1,0 +1,109 @@
+body {
+  background-color: #FFF6E9;
+  color: #604CC3;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  max-width: 800px;
+  margin: 15px auto;
+  padding: 20px;
+  background-color: #507687;
+  border-radius: 10px;
+  
+}
+
+.statebar {
+  display: flex;
+  color: #FFF8A1;
+  background-color: #384B70;
+  max-width: fit-content;
+  align-items: center;
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.category-section {
+  margin-bottom: 20px;
+}
+
+.category-section h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #FF7F3E;
+}
+
+.category-section label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #FF7F3E;
+  color: #604CC3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #FF7F3E;
+}
+
+.joke-box {
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px solid #c09e06;
+  background-color: #604CC3;
+  color:#80C4E9;
+  border-radius: 10px;
+}
+
+.joke-box h2 {
+  color: #FF7F3E;
+  margin-top: 0;
+}
+
+.joke-box p {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+#jokeAmount {
+  margin-left: 10px;
+  padding: 5px;
+  width: 50px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  margin-right: 5px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #B6C7AA;
+  margin: 15px 0;
+}
+.gradient body {
+  background-image: linear-gradient(
+    45deg,
+    hsl(220deg 33% 33%) 0%,
+    hsl(208deg 45% 35%) 8%,
+    hsl(200deg 59% 35%) 17%,
+    hsl(194deg 74% 34%) 26%,
+    hsl(188deg 85% 34%) 34%,
+    hsl(184deg 71% 38%) 43%,
+    hsl(177deg 52% 44%) 52%,
+    hsl(167deg 43% 53%) 60%,
+    hsl(153deg 45% 62%) 68%,
+    hsl(130deg 46% 71%) 77%,
+    hsl(99deg 56% 75%) 85%,
+    hsl(75deg 71% 77%) 93%,
+    hsl(56deg 100% 82%) 100%
+  );
+}
